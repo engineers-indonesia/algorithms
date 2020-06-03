@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
         array.add(item)
     }
 
-    // 3. Proses InsertionSort
+    // 3. Proses SelectionSort
     for (i in 0 until itemCount) {
         var indexMinimumItem = i
         for (j in i until itemCount) {
