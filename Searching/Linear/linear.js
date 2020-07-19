@@ -17,11 +17,14 @@ rl.question('Input arrays: ', (num) => {
 });
 
 const search = (arr, target) => {
-    for(i in arr) {
-        console.log(`Index ${i} = ${arr[i]}`);
-        if (i === target) {
-            console.log(`## Found target in index ${arr[i]}`);
-            break;
+    let idx = 0;
+    arr.forEach(function(val, i) {
+        console.log(`Index ${i} = ${val}`);
+        console.log(`val = ${val}, target = ${target}`);
+        if (val == target) {
+            idx = i;
+            return;
         }
-    }
+    });
+    console.log(`## Found target in index ${idx}`);
 }
